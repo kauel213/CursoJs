@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Document</title>
+</head>
+
+<body>
+  <button id ="novo q">Novo quadrado</button>
+
+  <div id="quadradoo"></div>
+
+  <script>
+    var ButtonElement = document.getElementById('novo q');
+    var ElementQuadr = document.getElementById('quadradoo');
+    ButtonElement.onclick = function () {
+      var quadradou = document.createElement('div');
+      quadradou.style.width = '100px';
+      quadradou.style.height = '100px';
+      quadradou.style.backgroundColor = '#F00';
+      ElementQuadr.appendChild(quadradou);
+    };
+  </script>
+</body>
+
+</html>

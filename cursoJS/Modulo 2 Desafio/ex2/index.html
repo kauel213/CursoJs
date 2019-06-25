@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Document</title>
+</head>
+
+<body>
+  <button id ="novo q">Novo quadrado</button>
+
+  <div id="quadradoo"></div>
+
+  <script>
+
+    
+    var ButtonElement = document.getElementById('novo q');
+    var ElementQuadr = document.getElementById('quadradoo');
+   
+    function getRandomColor() {
+      var letras = '0123456789ABCDEF';
+      var cor = '#';
+      for (var i = 0; i < 6; i++) {
+        cor += letras[Math.floor(Math.random() * 16)];
+      }
+      return cor;
+    }
+
+    ButtonElement.onclick = function () {
+      var quadradou = document.createElement('div');
+      quadradou.style.width = '100px';
+      quadradou.style.height = '100px';
+      quadradou.style.backgroundColor = '#F00';
+      ElementQuadr.appendChild(quadradou);
+      
+      quadradou.onmouseover = function () {
+        quadradou.style.backgroundColor = getRandomColor();
+      }
+
+    };
+  </script>
+</body>
+
+</html>

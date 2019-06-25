@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>document</title>
+</head>
+
+<body>
+  <ul></ul>
+
+  <script>
+      
+    var nomes = ['Diego', 'Gabriel', 'Lucas'];
+  
+    var ElementoList = document.querySelector('ul');
+
+    for (nome of nomes) {
+      var liElement = document.createElement('li');
+      var textElement = document.createTextNode(nome);
+      liElement.appendChild(textElement);
+      ElementoList.appendChild(liElement);
+    }
+  </script>
+</body>
+
+</html>
